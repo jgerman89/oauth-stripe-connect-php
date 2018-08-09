@@ -3,13 +3,12 @@ require_once('./config/config.php');
 
 // initialize a new generic provider
 $provider = new \League\OAuth2\Client\Provider\GenericProvider([
-    'clientId'                => CLIENT_ID,
-    'clientSecret'            => SECRET_KEY,
-    'redirectUri'             => REDIRECT_URL,
+    'clientId'                => ca_9O9Rw5orFobhEjUbDJRVfSJOd8u5jqvK,
+    'clientSecret'            => sk_live_8qHLTCEGpJf0OxJ1IwFoiD25,
+    'redirectUri'             => https://oauth-stripe-connect-php/oauth/connect.php,
     'urlAuthorize'            => 'https://connect.stripe.com/oauth/authorize',
     'urlAccessToken'          => 'https://connect.stripe.com/oauth/token',
-    'urlResourceOwnerDetails' => 'https://api.stripe.com/v1/account'
-]);
+    'urlResourceOwnerDetails' => 'https://api.stripe.com/v1/account']);
 
 // Check for an authorization code
 if (isset($_GET['code'])){
